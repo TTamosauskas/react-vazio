@@ -1,13 +1,22 @@
-body {
-  font-family: 'Roboto', sans-serif;
+html,
+body,
+#container {
+  height: 100%;
+  display:flex;
+  flex-direction: column;
 }
 
-
+main {
+  flex: 1 0 auto;
+}
 
 /* Ajustes Não mobile aqui embaixo */
 
 @media (min-width: 600px) {
+
+  html,
   body {
     background:#f7f7f7;;
   }
+
 }
