@@ -6,6 +6,11 @@ body,
   flex-direction: column;
 }
 
+#container main{
+  display:flex;
+  flex-direction: column;
+}
+
 /* Ajustes Não mobile aqui embaixo */
 
 @media (min-width: 600px) {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaReact } from 'react-icons/fa';
 import api from '../../services/api';
 import './styles.css';
 
@@ -18,23 +19,21 @@ export default class Main extends Component {
   };
 
   render() {
+    const { itens } = this.state;
+
     return (
       <main role="main">
-        <div>
-          <img
-            className="animated heartBeat infinite slower"
-            style={{ margin: 20 }}
-            width="100vmin"
-            src="https://cdn.worldvectorlogo.com/logos/react.svg"
-            alt="logo"
-          />
+        <FaReact
+          className="animated heartBeat infinite slower p-4"
+          color="#84beff"
+          size={150}
+        />
 
-          <ul>
-            {this.state.itens.map(item => (
-              <li key={item.id}>{item.name}</li>
-            ))}
-          </ul>
-        </div>
+        <ul>
+          {itens.map(item => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
       </main>
     );
   }
