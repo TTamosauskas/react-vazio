@@ -6,7 +6,11 @@ body,
   flex-direction: column;
 }
 
-
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Ajustes Não mobile aqui embaixo */
 
