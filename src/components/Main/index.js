@@ -1,8 +1,9 @@
 import React from 'react';
+import './styles.css';
 
 function Main() {
   return (
-<main><img width="40vmin" src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="logo" /></main>
+<main role="main"><img width="40vmin" src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="logo" /></main>
   );
 }
 
