@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { FaReact } from 'react-icons/fa';
-import { Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import api from '../../services/api';
-import Article from '../Article'
+import Article from '../Article';
 import './styles.css';
 
-
-export default class Main extends Component {
+class Main extends Component {
   state = {
     itens: [],
   };
@@ -32,23 +31,11 @@ export default class Main extends Component {
           size={150}
         />
 
-        <Article/>
-
-
-          {itens.map(item => (
-            <article key={item.id}>
-              <p>
-
-            <strong>{item.name}</strong><br/>
-
-            <Button variant="outline-info" size="sm">Info</Button>
-
-            </p>
-
-            </article>
-          ))}
-
+        {itens.map(item => (
+          <Article key={item.id} name={item.name} />
+        ))}
       </main>
     );
   }
 }
+export default Main;

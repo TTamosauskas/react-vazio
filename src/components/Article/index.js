@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
 
-function Article() {
-  return <article>
-article
-  </article>;
+class Article extends Component {
+  state = {};
+
+  render() {
+    return <article>{this.props.name}</article>;
+  }
 }
 
 export default Article;
