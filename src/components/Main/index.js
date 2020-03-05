@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { FaReact } from 'react-icons/fa';
-import { Button } from 'react-bootstrap';
 import api from '../../services/api';
 import Article from '../Article';
 import './styles.css';

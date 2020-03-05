@@ -1,9 +1,31 @@
 import React, { Component } from 'react';
+import api from '../../services/api';
 import './styles.css';
 
+class Page extends Component {
+  state = {
+    usuario: {},
+  };
 
-function Page() {
-  return <article><h2>Page</h2></article>;
+  async componentDidMount() {
+    const response = await api.get(`/users`);
+
+    this.setState({ usuario: response.data[0] });
+  }
+
+  render() {
+    const { usuario } = this.state;
+
+    return (
+      <main role="main" className="p-4">
+        <article>
+          <h2>Apelido: {usuario.name}</h2>
+          <p>{usuario.email}</p>
+          <p>{usuario.phone}</p>
+        </article>
+      </main>
+    );
+  }
 }
 
 export default Page;
