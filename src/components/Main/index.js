@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { FaReact } from 'react-icons/fa';
 import api from '../../services/api';
 import Article from '../Article';
-import './styles.css';
+import { StyledComponent } from './styles';
 
 class Main extends Component {
   state = {
@@ -23,17 +22,13 @@ class Main extends Component {
     const { itens } = this.state;
 
     return (
-      <main role="main" className="p-4">
-        <FaReact
-          className="animated heartBeat infinite slower p-4"
-          color="#84beff"
-          size={150}
-        />
-
-        {itens.map(item => (
-          <Article key={item.id} name={item.name} />
-        ))}
-      </main>
+      <StyledComponent>
+        <main role="main" className="p-4">
+          {itens.map(item => (
+            <Article key={item.id} name={item.name} />
+          ))}
+        </main>
+      </StyledComponent>
     );
   }
 }

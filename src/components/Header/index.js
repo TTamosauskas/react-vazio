@@ -1,11 +1,21 @@
 import React from 'react';
-import './styles.css';
+import { FaReact } from 'react-icons/fa';
+import { StyledComponent } from './styles';
 
 function Header() {
   return (
-    <header className="head p-4">
-      <h1>React Vazio</h1>
-    </header>
+    <StyledComponent>
+      <header className="head">
+        <h1>
+          <FaReact
+            className="animated heartBeat infinite slower p-4"
+            color="#84beff"
+            size={100}
+          />
+          React Vazio
+        </h1>
+      </header>
+    </StyledComponent>
   );
 }
 

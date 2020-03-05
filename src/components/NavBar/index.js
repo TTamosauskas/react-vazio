@@ -1,19 +1,21 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import './styles.css';
+import { StyledComponent } from './styles';
 
 function NavBar() {
   return (
-    <Nav className="p-4">
-      <Nav.Item>
-        <Nav.Link href="/">Home</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-1" href="/Page">
-          Page
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
+    <StyledComponent>
+      <nav>
+        <Nav>
+          <Nav.Item>
+            <Nav.Link href="/">Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/Page">Page</Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </nav>
+    </StyledComponent>
   );
 }
 

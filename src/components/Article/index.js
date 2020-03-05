@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import './styles.css';
+import { StyledComponent } from './styles';
 
 class Article extends Component {
   state = {};
 
   render() {
-    return <article>{this.props.name}</article>;
+    return (
+      <StyledComponent>
+        <article>{this.props.name}</article>
+      </StyledComponent>
+    );
   }
 }
 

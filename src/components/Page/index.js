@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
-import './styles.css';
+import { StyledComponent } from './styles';
 
 class Page extends Component {
   state = {
@@ -17,13 +17,15 @@ class Page extends Component {
     const { usuario } = this.state;
 
     return (
-      <main role="main" className="p-4">
-        <article>
-          <h2>Apelido: {usuario.name}</h2>
-          <p>{usuario.email}</p>
-          <p>{usuario.phone}</p>
-        </article>
-      </main>
+      <StyledComponent>
+        <main role="main" className="p-3">
+          <article>
+            <h2>Apelido: {usuario.name}</h2>
+            <p>{usuario.email}</p>
+            <p>{usuario.phone}</p>
+          </article>
+        </main>
+      </StyledComponent>
     );
   }
 }

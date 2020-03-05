@@ -1,8 +1,12 @@
 import React from 'react';
-import './styles.css';
+import { StyledComponent } from './styles';
 
 function Footer() {
-  return <footer className="p-4">2020</footer>;
+  return (
+    <StyledComponent>
+      <footer className="p-4">2020</footer>
+    </StyledComponent>
+  );
 }
 
 export default Footer;
