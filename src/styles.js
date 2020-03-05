@@ -16,9 +16,9 @@ export const StyledComponent = styled.div`
     flex-direction: column;
   }
 
-  /* Ajustes Não mobile aqui embaixo */
+  /* CSS Mobile First  */
 
   @media (min-width: 600px) {
-    background: ${backgroundColor};
+    /* CSS desktopo aqui  */
   }
 `;
