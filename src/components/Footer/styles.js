@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledComponent = styled.div`
+export const StyledFooter = styled.footer`
   /* CSS Mobile First  */
 
   @media (min-width: 600px) {

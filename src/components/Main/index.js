@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import Article from '../Article';
-import { StyledComponent } from './styles';
+import { StyledMain } from './styles';
 
 class Main extends Component {
   state = {
@@ -22,13 +22,11 @@ class Main extends Component {
     const { itens } = this.state;
 
     return (
-      <StyledComponent>
-        <main role="main" className="p-4">
-          {itens.map(item => (
-            <Article key={item.id} name={item.name} />
-          ))}
-        </main>
-      </StyledComponent>
+      <StyledMain role="main" className="p-4">
+        {itens.map(item => (
+          <Article key={item.id} name={item.name} />
+        ))}
+      </StyledMain>
     );
   }
 }

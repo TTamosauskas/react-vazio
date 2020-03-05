@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { linkColor } from './mainStyles';
 
-export const StyledComponent = styled.div`
+export const StyledApp = styled.div`
+  height: 100%;
+
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
   * {
@@ -14,11 +16,7 @@ export const StyledComponent = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-  #container main {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
   }
 
   a {

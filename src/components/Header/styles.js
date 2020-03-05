@@ -3,8 +3,8 @@ import { flip } from 'react-animations';
 
 const flipAnimation = keyframes`${flip}`;
 
-export const StyledComponent = styled.div`
-  .flip {
+export const StyledHeader = styled.header`
+  svg {
     animation: 3s ${flipAnimation} infinite;
   }
 

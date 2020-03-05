@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { StyledComponent } from './styles';
+import { StyledArticle } from './styles';
 
 class Article extends Component {
   state = {};
 
   render() {
     return (
-      <StyledComponent>
+      <StyledArticle>
         <article>{this.props.name}</article>
-      </StyledComponent>
+      </StyledArticle>
     );
   }
 }

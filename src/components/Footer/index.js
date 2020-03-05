@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyledComponent } from './styles';
+import { StyledFooter } from './styles';
 
 function Footer() {
   return (
-    <StyledComponent>
-      <footer className="p-4">2020</footer>
-    </StyledComponent>
+    <StyledFooter className="p-4">
+      <spam>2020</spam>
+    </StyledFooter>
   );
 }
 
