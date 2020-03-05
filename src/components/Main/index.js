@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { FaReact } from 'react-icons/fa';
+import { Button} from 'react-bootstrap';
 import api from '../../services/api';
+import Article from '../Article'
 import './styles.css';
+
 
 export default class Main extends Component {
   state = {
@@ -22,18 +25,29 @@ export default class Main extends Component {
     const { itens } = this.state;
 
     return (
-      <main role="main">
+      <main role="main" className="p-4">
         <FaReact
           className="animated heartBeat infinite slower p-4"
           color="#84beff"
           size={150}
         />
 
-        <ul>
+        <Article/>
+
+
           {itens.map(item => (
-            <li key={item.id}>{item.name}</li>
+            <article key={item.id}>
+              <p>
+
+            <strong>{item.name}</strong><br/>
+
+            <Button variant="outline-info" size="sm">Info</Button>
+
+            </p>
+
+            </article>
           ))}
-        </ul>
+
       </main>
     );
   }
