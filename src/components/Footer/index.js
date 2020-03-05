@@ -4,7 +4,9 @@ import { StyledFooter } from './styles';
 function Footer() {
   return (
     <StyledFooter className="p-4">
-      <spam>2020</spam>
+      <span>
+        2020 - <a href="https://github.com/TTamosauskas/react-vazio">GitHub</a>
+      </span>
     </StyledFooter>
   );
 }
