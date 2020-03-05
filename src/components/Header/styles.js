@@ -1,7 +1,12 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { flip } from 'react-animations';
+
+const flipAnimation = keyframes`${flip}`;
 
 export const StyledComponent = styled.div`
-  /* CSS Mobile First  */
+  .flip {
+    animation: 3s ${flipAnimation} infinite;
+  }
 
   @media (min-width: 600px) {
     /* CSS desktopo aqui  */

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaReact } from 'react-icons/fa';
+
 import { StyledComponent } from './styles';
 
 function Header() {
@@ -7,11 +8,7 @@ function Header() {
     <StyledComponent>
       <header className="head">
         <h1>
-          <FaReact
-            className="animated heartBeat infinite slower p-4"
-            color="#84beff"
-            size={100}
-          />
+          <FaReact className="flip p-4" color="#84beff" size={100} />
           React Vazio
         </h1>
       </header>
