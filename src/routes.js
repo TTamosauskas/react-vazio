@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter, Route} from 'react-router-dom';
 
 import Main from './components/Main';
 
