@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { linkColor } from './mainStyles';
+import { linkColor } from './GlobalStyles';
 
 export const StyledApp = styled.div`
   height: 100%;
