@@ -4,8 +4,6 @@ import { linkColor } from './mainStyles';
 export const StyledApp = styled.div`
   height: 100%;
 
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
   * {
     font-family: 'Roboto', sans-serif;
   }
