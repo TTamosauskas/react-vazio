@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import { linkColor } from './GlobalStyles';
+import { Roboto, linkColor } from './GlobalStyles';
 
 export const StyledApp = styled.div`
-  height: 100%;
+
+${Roboto}
+
+height: 100%;
 
   * {
     font-family: 'Roboto', sans-serif;
