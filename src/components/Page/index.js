@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { DatePicker, message } from 'antd';
+import { Spin, DatePicker, message } from 'antd';
 import { StyledMain } from './styles';
 import api from '../../services/api';
 import 'antd/dist/antd.css';
 
 function Page() {
-  const [usuario, setUsuario] = useState({});
+  const [usuario, setUsuario] = useState(null);
+
+  console.log(usuario);
 
   useEffect(() => {
     message.info('Mensagem de 3 segundos', 3);
@@ -19,7 +21,9 @@ function Page() {
     loadUsuario();
   }, []);
 
-  console.log(usuario);
+  if (usuario === null) {
+    return <Spin size="large" />;
+  }
 
   return (
     <StyledMain role="main" className="p-3">

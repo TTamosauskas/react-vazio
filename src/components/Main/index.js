@@ -5,7 +5,7 @@ import Article from '../Article';
 import { StyledMain } from './styles';
 
 function Main() {
-  const [lista, setLista] = useState([]);
+  const [lista, setLista] = useState(null);
 
   useEffect(() => {
     async function loadLista() {
@@ -17,8 +17,8 @@ function Main() {
     loadLista();
   }, []);
 
-  if (lista === []) {
-    return <Spin />;
+  if (lista === null) {
+    return <Spin size="large" />;
   }
 
   return (
