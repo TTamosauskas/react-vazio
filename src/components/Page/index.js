@@ -1,38 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DatePicker, message } from 'antd';
-import api from '../../services/api';
 import { StyledMain } from './styles';
+import api from '../../services/api';
 import 'antd/dist/antd.css';
 
-class Page extends Component {
-  state = {
-    usuario: {},
-  };
+function Page() {
+  const [usuario, setUsuario] = useState({});
 
-  async componentDidMount() {
-    const response = await api.get(`/users`);
-
-    this.setState({ usuario: response.data[0] });
-
+  useEffect(() => {
     message.info('Mensagem de 3 segundos', 3);
-  }
 
-  render() {
-    const { usuario } = this.state;
+    async function loadUsuario() {
+      const response = await api.get('/users');
 
-    return (
-      <StyledMain>
-        <main role="main" className="p-3">
-          <article>
-            <h2>Apelido: {usuario.name}</h2>
-            <p>{usuario.email}</p>
+      setUsuario(response.data[0]);
+    }
 
-            <DatePicker />
-          </article>
-        </main>
-      </StyledMain>
-    );
-  }
+    loadUsuario();
+  }, []);
+
+  console.log(usuario);
+
+  return (
+    <StyledMain role="main" className="p-3">
+      <article>
+        <h2>{usuario.name}</h2>
+        <p>Apelido: {usuario.username}</p>
+        <p>{usuario.email}</p>
+        <DatePicker />
+      </article>
+    </StyledMain>
+  );
 }
 
 export default Page;

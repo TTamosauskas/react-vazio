@@ -1,16 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { StyledArticle } from './styles';
 
-class Article extends Component {
-  state = {};
-
-  render() {
-    return (
-      <StyledArticle>
-        <article>{this.props.name}</article>
-      </StyledArticle>
-    );
-  }
+function Article({ item }) {
+  return <StyledArticle id={item.id}>{item.name}</StyledArticle>;
 }
 
 export default Article;

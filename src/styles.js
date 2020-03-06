@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import { Roboto, linkColor } from './GlobalStyles';
 
 export const StyledApp = styled.div`
+  ${Roboto}
 
-${Roboto}
-
-height: 100%;
+  height: 100%;
 
   * {
     font-family: 'Roboto', sans-serif;
@@ -18,6 +17,10 @@ height: 100%;
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+
+  main {
+    flex: 1 0 auto;
   }
 
   a {

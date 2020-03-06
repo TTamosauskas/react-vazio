@@ -1,33 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import Article from '../Article';
 import { StyledMain } from './styles';
 
-class Main extends Component {
-  state = {
-    itens: [],
-  };
+function Main() {
+  const [lista, setLista] = useState({});
 
-  componentDidMount() {
-    this.loadAPI();
-  }
+  useEffect(() => {
+    async function loadLista() {
+      const response = await api.get('/users');
 
-  loadAPI = async () => {
-    const response = await api.get('/users');
+      setLista(response.data);
+    }
 
-    this.setState({ itens: response.data });
-  };
+    loadLista();
+  }, []);
 
-  render() {
-    const { itens } = this.state;
+  const listaArray = Object.values(lista);
 
-    return (
-      <StyledMain role="main" className="p-4">
-        {itens.map(item => (
-          <Article key={item.id} name={item.name} />
-        ))}
-      </StyledMain>
-    );
-  }
+  return (
+    <StyledMain role="main" className="p-4">
+      {listaArray.map(item => (
+        <Article key={item.name} item={item} />
+      ))}
+    </StyledMain>
+  );
 }
 export default Main;
