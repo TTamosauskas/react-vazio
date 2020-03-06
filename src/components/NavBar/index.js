@@ -10,7 +10,7 @@ function NavBar() {
           <Nav.Link href="/">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/Page">Page</Nav.Link>
+          <Nav.Link href="/page">Page</Nav.Link>
         </Nav.Item>
       </Nav>
     </StyledNav>
