@@ -9,10 +9,10 @@ import Page from './components/Page';
 
 const Routes = () => (
   <BrowserRouter>
-  <Switch>
+
     <Route exact path="/" component={Main} />
     <Route path="/page" component={Page} />
-  </Switch>
+
   </BrowserRouter>
 );
 
