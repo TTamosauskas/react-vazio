@@ -7,8 +7,6 @@ import 'antd/dist/antd.css';
 function Page() {
   const [usuario, setUsuario] = useState(null);
 
-  console.log(usuario);
-
   useEffect(() => {
     message.info('Mensagem de 3 segundos', 3);
 
